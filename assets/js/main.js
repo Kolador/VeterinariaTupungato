@@ -188,3 +188,14 @@
 			});
 
 })(jQuery);
+
+function sendMail() {
+    var link = "mailto:fermcarbone92@gmail.com"
+             + "&subject=" + encodeURIComponent("Consulta web")
+             + "&body=Has recibido una consulta web de: " + document.getElementById('name').value + "\n" 
+			 + "El cuerpo es: " + encodeURIComponent(document.getElementById('message').value) + "\n"
+			 + "El correo electronico es: " + document.getElementById('email').value
+    ;
+    
+    window.location.href = link;
+}
